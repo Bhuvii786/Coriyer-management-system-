@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courier Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">📦 Courier Management System</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#book">Book Courier</a>
+      <a href="#track">Track</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <h1>Fast & Reliable Courier Service</h1>
+        <p>Book, manage and track your courier deliveries easily.</p>
+        <a class="button" href="#book">Book a Courier</a>
+      </div>
+    </section>
+
+    <section class="cards">
+      <div class="card"><h3>📦 Easy Booking</h3><p>Enter sender and receiver details to book a courier.</p></div>
+      <div class="card"><h3>🚚 Quick Delivery</h3><p>Manage courier details and delivery status.</p></div>
+      <div class="card"><h3>🔎 Easy Tracking</h3><p>Track a courier using its tracking number.</p></div>
+    </section>
+
+    <section id="book" class="section">
+      <h2>Book Courier</h2>
+      <form id="bookingForm">
+        <input id="sender" type="text" placeholder="Sender Name" required>
+        <input id="receiver" type="text" placeholder="Receiver Name" required>
+        <input id="phone" type="tel" placeholder="Receiver Phone" required>
+        <input id="address" type="text" placeholder="Delivery Address" required>
+        <select id="service" required>
+          <option value="">Select Service</option>
+          <option>Standard Delivery</option>
+          <option>Express Delivery</option>
+        </select>
+        <button type="submit">Book Courier</button>
+      </form>
+      <p id="bookingResult" class="result"></p>
+    </section>
+
+    <section id="track" class="section">
+      <h2>Track Courier</h2>
+      <div class="track-box">
+        <input id="trackingInput" type="text" placeholder="Enter tracking number">
+        <button onclick="trackCourier()">Track</button>
+      </div>
+      <div id="trackingResult" class="result"></div>
+    </section>
+
+    <section class="section">
+      <h2>Courier Records</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tracking ID</th>
+              <th>Sender</th>
+              <th>Receiver</th>
+              <th>Service</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="courierTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Contact</h2>
+      <p>Email: support@couriersystem.example</p>
+      <p>Phone: +91 90000 00000</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Courier Management System | Student Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
